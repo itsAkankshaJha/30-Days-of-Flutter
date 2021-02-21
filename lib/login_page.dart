@@ -1,5 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:my_flutter/routes.dart';
+
+import 'home_page.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -50,7 +54,9 @@ class LoginPage extends StatelessWidget {
             SizedBox(
               height: 18,
             ),
-            ElevatedButton(onPressed: (){},
+            ElevatedButton(onPressed: (){
+              Navigator.pushNamed(context, MyRoutes.myHome);
+            },
                 style: ButtonStyle(
                 ),
                 child: Container(
