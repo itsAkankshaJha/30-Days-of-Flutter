@@ -3,7 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:my_flutter/routes.dart';
+import 'file:///C:/Flutter_Projects/my_flutter/lib/utils/routes.dart';
 
 import 'home_page.dart';
 
