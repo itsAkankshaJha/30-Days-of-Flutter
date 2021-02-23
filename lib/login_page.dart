@@ -100,27 +100,27 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 18,
               ),
-              InkWell(
-                onTap:() => moveToHome(context),
-                child: AnimatedContainer(
-                  duration: Duration(microseconds: 800),
-                  alignment: Alignment.center,
-                  height: 50,
-                  width: pressed?50:130,
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurple,
-                    borderRadius: pressed?BorderRadius.circular(50): BorderRadius.circular(8),
-                  ),
-                  child:pressed?Icon(
-                    Icons.done,
-                    color: Colors.green,
-                    size: 44,
-                  ):
-                  Text(
-                    "Login",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
+              Material(
+                color: Colors.deepPurple,
+                  borderRadius: pressed?BorderRadius.circular(50): BorderRadius.circular(8),
+                child: InkWell(
+                  onTap:() => moveToHome(context),
+                  child: AnimatedContainer(
+                    duration: Duration(microseconds: 800),
+                    alignment: Alignment.center,
+                    height: 50,
+                    width: pressed?50:130,
+                    child:pressed?Icon(
+                      Icons.done,
+                      color: Colors.green,
+                      size: 44,
+                    ):
+                    Text(
+                      "Login",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                      ),
                     ),
                   ),
                 ),
