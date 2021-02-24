@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
     return Scaffold(
       drawer: MyDrawer(),
         appBar: AppBar(
-          title: Text("Home Page"),
+          title: Text("Catalog App"),
         ),
         body: Center(
           child: Container(
@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
               "Welcome to 30 days of flutter",
               style: TextStyle(
                 fontSize: 28.0,
-                color: Colors.deepPurple,
               ),
             ),
           ),
