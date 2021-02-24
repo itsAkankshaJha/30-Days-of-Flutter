@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
             child: Text(
               "Welcome to 30 days of flutter",
               style: TextStyle(
-                fontSize: 30.0,
-                color: Colors.blue,
+                fontSize: 28.0,
+                color: Colors.deepPurple,
               ),
             ),
           ),
