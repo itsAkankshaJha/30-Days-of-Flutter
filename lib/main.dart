@@ -1,6 +1,4 @@
 
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:my_flutter/widgets/theme.dart';
 import 'file:///C:/Flutter_Projects/my_flutter/lib/pages/login_page.dart';
