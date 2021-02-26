@@ -10,7 +10,7 @@ void main(){
       title: "Catalog App",
       theme: MyTheme.lightTheme(),
       darkTheme: MyTheme.darkTheme(),
-      initialRoute: MyRoutes.myHome ,
+      initialRoute: MyRoutes.myLogin ,
       routes: {
         MyRoutes.myLogin:(context) =>LoginPage(),
         MyRoutes.myHome:(context) => MyApp(),
