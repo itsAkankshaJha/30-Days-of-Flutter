@@ -1,0 +1,83 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "name":"Iphone 12 pro",
+            "desc":"Apple iphone 12th generation",
+            "color":"33505a",
+            "price":999,
+            "image":"https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1604021663000"
+        },
+         {
+            "id": 2,
+            "name":"Mac Book",
+            "desc":"13-inch, 8GB RAM, 264GB SSD",
+            "color":"33505a",
+            "price":1500,
+            "image":"https://cdn.shopify.com/s/files/1/1684/4603/products/MacBookPro13_Mid2012_NonRetina_Silver.png?v=1610610524"
+        },
+         {
+            "id": 3,
+            "name":"Airpods",
+            "desc":"Apple airpods with wireless charging",
+            "color":"33505a",
+            "price":500,
+            "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWP22?wid=2000&hei=2000&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1591634795000"
+        },
+         {
+            "id": 4,
+            "name":"Samsung M30",
+            "desc":"16GB RAM, 64GB ROM, 5000MAh battery",
+            "color":"33505a",
+            "price":499,
+            "image":"https://images-na.ssl-images-amazon.com/images/I/71ZmHmLIIZL._SL1500_.jpg"
+        }, {
+            "id": 5,
+            "name":"HP Pavilion",
+            "desc":"Super fast 10th gen intel processor",
+            "color":"33505a",
+            "price":799,
+            "image":"https://in-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/8/q/8qg92pa_5.png"
+        },
+         {
+            "id": 6,
+            "name":"Apple watch",
+            "desc":"Apple watch series 4",
+            "color":"33505a",
+            "price":499,
+            "image":"https://i.pinimg.com/originals/17/49/2c/17492c348d1f046f7c1dda06872e30b6.jpg"
+        },
+         {
+            "id": 7,
+            "name":"Redmi Note 7s",
+            "desc":"8GB RAM, 64GB ROM",
+            "color":"33505a",
+            "price":399,
+            "image":"https://i.ytimg.com/vi/xCzIsiF_htg/maxresdefault.jpg"
+        },
+         {
+            "id": 8,
+            "name":"One Plus",
+            "desc":"Wireless headphones with long lasting battery life",
+            "color":"33505a",
+            "price":499,
+            "image":"https://image01.oneplus.net/ebp/201810/27/1632/6bf0f3efcc2c85d4f9e9e8b92c4769fc.png"
+        },
+         {
+            "id": 9,
+            "name":"One Plus Nord",
+            "desc":"12GB RAM, 128GB ROM",
+            "color":"33505a",
+            "price":899,
+            "image":"https://www.reliancedigital.in/medias/OnePlus-Nord-Gray-Onyx-8-128-491894432-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w1NDIxMDF8aW1hZ2UvanBlZ3xpbWFnZXMvaDYwL2g3Ni85MzM3MjE0Njk3NTAyLmpwZ3w1OWU4YTU3ODM0YzEwNTY1MDU2NzdlNjhmNDNhNjNhMmM4MDUxZjkxOWZlZWU4NTY4NzRkN2RlNmIxM2RlZjhk"
+        },
+         {
+            "id": 10,
+            "name":"Pixel 1s",
+            "desc":"Super camera phone from google",
+            "color":"33505a",
+            "price":599,
+            "image":"https://images-na.ssl-images-amazon.com/images/I/81-fNmQqlLL._AC_SX522_.jpg"
+        }
+    ]
+}
