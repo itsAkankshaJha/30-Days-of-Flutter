@@ -18,23 +18,29 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     loadData();
   }
-  loadData() async{
-   final catalogJson = await rootBundle.loadString("assets/files/catalog.json");
-   final jsonDecoded = jsonDecode(catalogJson);
-   var productsData = jsonDecoded["Products"];
+
+  loadData() async {
+    final catalogJson =
+        await rootBundle.loadString("assets/files/catalog.json");
+    final jsonDecoded = jsonDecode(catalogJson);
+    var productsData = jsonDecoded["Products"];
+    ModelItem.items = List.from(productsData)
+        .map<Item>((item) => Item.fromMap(item))
+        .toList();
+    setState(() {});
   }
+
   @override
   Widget build(BuildContext context) {
-    var list = List<String>.generate(100, (index) => ModelItem.items[0].desc);
     return Scaffold(
       drawer: MyDrawer(),
       appBar: AppBar(
         title: Text("Catalog App"),
       ),
       body: ListView.builder(
-          itemCount: list.length,
+          itemCount: ModelItem.items.length,
           itemBuilder: (context, index) {
-            return itemWidget(item: ModelItem.items[0]);
+            return itemWidget(item: ModelItem.items[index]);
           }),
     );
   }
