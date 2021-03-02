@@ -21,6 +21,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   loadData() async {
+    await Future.delayed(Duration(seconds: 2));
     final catalogJson =
         await rootBundle.loadString("assets/files/catalog.json");
     final jsonDecoded = jsonDecode(catalogJson);
@@ -39,7 +40,7 @@ class _MyAppState extends State<MyApp> {
         title: Text("Catalog App"),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(4),
         child:(ModelItem.items!=null && ModelItem.items.isNotEmpty) ?ListView.builder(
             itemCount: ModelItem.items.length,
             itemBuilder: (context, index) {

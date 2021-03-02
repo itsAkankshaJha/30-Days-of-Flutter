@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter/model/catalog.dart';
 
 Widget itemWidget({@required Item item}){
+  assert(item!=null);
   return Card(
     child: ListTile(
       onTap: (){},
