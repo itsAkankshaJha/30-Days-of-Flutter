@@ -4,6 +4,8 @@ import 'package:my_flutter/model/catalog.dart';
 Widget itemWidget({@required Item item}){
   assert(item!=null);
   return Card(
+    margin: EdgeInsets.all(16),
+    shadowColor: Colors.deepPurple,
     child: ListTile(
       onTap: (){},
       leading: Image.network(item.imageUrl),
@@ -11,7 +13,7 @@ Widget itemWidget({@required Item item}){
       subtitle: Text(item.desc),
       trailing: Text("\$${item.price}",
         style: TextStyle(
-          fontSize: 20,
+          fontSize: 16,
           fontWeight:FontWeight.bold,
         ),
       ),
