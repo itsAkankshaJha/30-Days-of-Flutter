@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 class MyTheme {
+   static Color creamColor = Color(0xfff5f5f5);
   static ThemeData lightTheme({BuildContext context}) =>
     ThemeData(
       primarySwatch: Colors.deepPurple,
