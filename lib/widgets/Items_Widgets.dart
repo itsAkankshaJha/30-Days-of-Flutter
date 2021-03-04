@@ -18,7 +18,6 @@ Widget itemWidget({@required Item item}){
       child: Row(
         children: [
           Container(
-            color: Color(0xfff5f5f5),
             child: Image.network(item.imageUrl),
             height: double.infinity,
             width: 150,
