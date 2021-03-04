@@ -36,24 +36,44 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    backgroundColor: Color(0xfff5f5f5),
+      backgroundColor: Color(0xfff5f5f5),
       drawer: MyDrawer(),
-      appBar: AppBar(
-        title: Text("Catalog App"),
-      ),
-      body: Padding(
-        padding: EdgeInsets.only(top: 16),
-        child: (ModelItem.items != null && ModelItem.items.isNotEmpty)
-            ? ListView.builder(
-          itemCount: ModelItem.items.length,
-            itemBuilder: (context,index){
-            return itemWidget(item: ModelItem.items[index]);
-            }
+      body: (ModelItem.items != null && ModelItem.items.isNotEmpty)
+          ? CustomScrollView(
+              slivers: [
+                SliverAppBar(
+                  elevation: 0,
+                  expandedHeight: 100,
+                  floating: false,
+                  iconTheme: IconThemeData(
+                    color: Colors.white,
+                  ),
+                  backgroundColor: Colors.deepPurpleAccent,
+                  centerTitle: true,
+                  title: Padding(
+                    padding: EdgeInsets.only(top: 22),
+                    child: Text(
+                      "Catalog App",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 34,
+                      ),
+                    ),
+                  ),
+                ),
+                SliverList(
+                  delegate: SliverChildBuilderDelegate((context, index) {
+                    return itemWidget(item: ModelItem.items[index],);
+                  },
+                    childCount: ModelItem.items.length,
+                  ),
+                ),
+              ],
             )
-            : Center(
-                child: CircularProgressIndicator(),
-              ),
-      ),
+          : Center(
+              child: CircularProgressIndicator(),
+            ),
     );
   }
 }
