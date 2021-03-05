@@ -2,9 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_flutter/model/catalog.dart';
+import 'package:my_flutter/utils/routes.dart';
+import 'package:flutter/services.dart';
 import 'package:my_flutter/widgets/theme.dart';
 
-Widget itemWidget({@required Item item}){
+Widget itemWidget({BuildContext context,@required Item item}){
   assert(item!=null);
   return Padding(
     padding: EdgeInsets.all(16),
@@ -12,7 +14,7 @@ Widget itemWidget({@required Item item}){
       height: 180,
       decoration: BoxDecoration(
           color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(16),
       ),
       padding: EdgeInsets.all(8),
       child: Row(
@@ -31,6 +33,7 @@ Widget itemWidget({@required Item item}){
                     item.name,
                     style: TextStyle(
                       fontSize: 22,
+                      fontWeight: FontWeight.bold,
                       color: Colors.indigo[900],
                     ),
                   ),
@@ -40,7 +43,7 @@ Widget itemWidget({@required Item item}){
                   Text(
                       item.desc,
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.black.withOpacity(0.7),
                     ),
                   ),
                   SizedBox(
@@ -59,9 +62,10 @@ Widget itemWidget({@required Item item}){
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      ElevatedButton(onPressed: (){},
-                          style: ButtonStyle(
-                          ),
+                      ElevatedButton(onPressed: (){
+                        Navigator.pushNamed(context, MyRoutes.myCart);
+                      },
+                          clipBehavior: Clip.antiAlias,
                           child: Text(
                             "Buy",
                             style: TextStyle(
