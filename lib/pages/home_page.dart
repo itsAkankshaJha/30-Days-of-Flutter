@@ -53,16 +53,16 @@ class _MyAppState extends State<MyApp> {
                   expandedHeight: 100,
                   floating: false,
                   iconTheme: IconThemeData(
-                    color: Colors.white,
+                    color: Colors.deepPurple[900],
                   ),
-                  backgroundColor: Colors.deepPurpleAccent,
+                  backgroundColor: Colors.transparent,
                   centerTitle: true,
                   title: Padding(
-                    padding: EdgeInsets.only(top: 22),
+                    padding: EdgeInsets.only(top: 16),
                     child: Text(
                       "Catalog App",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.deepPurple[900],
                         fontWeight: FontWeight.bold,
                         fontSize: 34,
                       ),
@@ -81,7 +81,7 @@ class _MyAppState extends State<MyApp> {
                                           item: ModelItem.items[index],
                                         )));
                           },
-                          child: itemWidget(
+                          child: itemWidget(context:context,
                             item: ModelItem.items[index],
                           ));
                     },
