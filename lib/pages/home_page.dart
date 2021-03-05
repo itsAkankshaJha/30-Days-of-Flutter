@@ -1,9 +1,9 @@
 import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_flutter/model/catalog.dart';
 import 'package:my_flutter/pages/item_page.dart';
+import 'package:my_flutter/utils/routes.dart';
 import 'package:my_flutter/widgets/Items_Widgets.dart';
 import 'package:my_flutter/widgets/drawer.dart';
 import 'package:flutter/services.dart';
@@ -37,6 +37,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.pushNamed(context,MyRoutes.myCart);
+        },
+        label: Icon(CupertinoIcons.cart),
+      ),
       backgroundColor: Color(0xfff5f5f5),
       drawer: MyDrawer(),
       body: (ModelItem.items != null && ModelItem.items.isNotEmpty)
