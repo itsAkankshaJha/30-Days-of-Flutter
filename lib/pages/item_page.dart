@@ -12,9 +12,12 @@ class MyItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar:AppBar(
+          backgroundColor: MyTheme.creamColor,
+          elevation: 0,
+        ),
         body: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.only(top: 35),
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             alignment: Alignment.center,
@@ -33,7 +36,9 @@ class MyItem extends StatelessWidget {
                     shape: BoxShape.circle,
                     color: Colors.white,
                   ),
-                  child: Image.network(item.imageUrl),
+                  child: Hero(child: Image.network(item.imageUrl),
+                    tag: Key(item.id.toString()),
+                  ),
                 ),
                 Container(
                   child: Padding(
