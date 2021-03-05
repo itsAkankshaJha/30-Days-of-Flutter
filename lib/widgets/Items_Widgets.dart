@@ -13,7 +13,7 @@ Widget itemWidget({BuildContext context,@required Item item}){
     child: Container(
       height: 180,
       decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(16),
       ),
       padding: EdgeInsets.all(8),
@@ -34,7 +34,7 @@ Widget itemWidget({BuildContext context,@required Item item}){
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
-                      color: Colors.indigo[900],
+                      color: Theme.of(context).iconTheme.color,
                     ),
                   ),
                   SizedBox(
@@ -43,7 +43,7 @@ Widget itemWidget({BuildContext context,@required Item item}){
                   Text(
                       item.desc,
                     style: TextStyle(
-                      color: Colors.black.withOpacity(0.7),
+                      color: Theme.of(context).iconTheme.color.withOpacity(0.5),
                     ),
                   ),
                   SizedBox(
@@ -59,12 +59,15 @@ Widget itemWidget({BuildContext context,@required Item item}){
                         "\$${item.price.toString()}",
                         style: TextStyle(
                           fontSize: 22,
+                          color: Theme.of(context).iconTheme.color,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      ElevatedButton(onPressed: (){
+                      RaisedButton(onPressed: (){
                         Navigator.pushNamed(context, MyRoutes.myCart);
                       },
+                          color: Colors.deepPurple,
+                          shape: StadiumBorder(side: BorderSide.none),
                           clipBehavior: Clip.antiAlias,
                           child: Text(
                             "Buy",

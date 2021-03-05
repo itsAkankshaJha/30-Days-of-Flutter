@@ -3,7 +3,11 @@ class MyTheme {
    static Color creamColor = Color(0xfff5f5f5);
   static ThemeData lightTheme({BuildContext context}) =>
     ThemeData(
-      primarySwatch: Colors.deepPurple,
+      backgroundColor: Colors.white,
+      cardColor: creamColor,
+      iconTheme: IconThemeData(
+        color: Colors.deepPurple[900],
+      ),
       primaryColor: Colors.deepPurple,
       textTheme: TextTheme(
         bodyText1: TextStyle(
@@ -17,6 +21,24 @@ class MyTheme {
   static ThemeData darkTheme({BuildContext context}){
     return ThemeData(
       brightness: Brightness.dark,
+      iconTheme: IconThemeData(
+        color: Colors.white,
+      ),
+      appBarTheme: AppBarTheme(
+        color: Colors.white,
+      ),
+      backgroundColor: Colors.grey[900],
+      cardColor: Colors.grey[850],
+        primaryColor: Colors.white,
+        accentColor: Colors.deepPurple,
+        textTheme: TextTheme(
+            bodyText1: TextStyle(
+              color: Colors.white,
+            ),
+            bodyText2: TextStyle(
+              color: Colors.white,
+            )
+        )
     );
   }
 }

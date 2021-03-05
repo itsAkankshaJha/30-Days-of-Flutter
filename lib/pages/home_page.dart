@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
         },
         label: Icon(CupertinoIcons.cart),
       ),
-      backgroundColor: Color(0xfff5f5f5),
+      backgroundColor: Theme.of(context).backgroundColor,
       drawer: MyDrawer(),
       body: (ModelItem.items != null && ModelItem.items.isNotEmpty)
           ? CustomScrollView(
@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
                   expandedHeight: 100,
                   floating: false,
                   iconTheme: IconThemeData(
-                    color: Colors.deepPurple[900],
+                    color: Theme.of(context).iconTheme.color,
                   ),
                   backgroundColor: Colors.transparent,
                   centerTitle: true,
@@ -62,7 +62,7 @@ class _MyAppState extends State<MyApp> {
                     child: Text(
                       "Catalog App",
                       style: TextStyle(
-                        color: Colors.deepPurple[900],
+                        color: Theme.of(context).primaryColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 34,
                       ),
