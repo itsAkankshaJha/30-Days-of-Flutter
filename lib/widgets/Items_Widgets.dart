@@ -18,7 +18,8 @@ Widget itemWidget({@required Item item}){
       child: Row(
         children: [
           Container(
-            child: Image.network(item.imageUrl),
+            child: Hero(child: Image.network(item.imageUrl),
+            tag: Key(item.id.toString()),),
             height: double.infinity,
             width: 150,
           ),
