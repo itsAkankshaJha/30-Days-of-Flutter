@@ -6,7 +6,7 @@
             "desc":"Apple iphone 12th generation",
             "color":"33505a",
             "price":999,
-            "image":"https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1604021663000"
+            "image":"https://lh3.googleusercontent.com/proxy/Z37gzLvWLaqQC-kGqW8-SlTD67QDJH-O3OulIu-Nnrnrzqm2RDQwTsaC0KikMm9aQ3VFOZqaMDWpxydkizi_dnGBnn2_9jRv9hm-JzwnMkcyvKWmdYHYGVlm"
         },
          {
             "id": 2,
@@ -22,7 +22,7 @@
             "desc":"Apple airpods with wireless charging",
             "color":"33505a",
             "price":500,
-            "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWP22?wid=2000&hei=2000&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1591634795000"
+            "image":"https://www.freepnglogos.com/uploads/airpods-png/airpods-wireless-headphones-apple-indiaistore-4.png"
         },
          {
             "id": 4,
@@ -30,7 +30,7 @@
             "desc":"16GB RAM, 64GB ROM, 5000MAh battery",
             "color":"33505a",
             "price":499,
-            "image":"https://images-na.ssl-images-amazon.com/images/I/71ZmHmLIIZL._SL1500_.jpg"
+            "image":"https://images.samsung.com/is/image/samsung/africa-en-galaxy-m11-m115-sm-m115fzkdxfe-frontblack-thumb-229083419"
         }, {
             "id": 5,
             "name":"HP Pavilion",
@@ -45,7 +45,7 @@
             "desc":"Apple watch series 4",
             "color":"33505a",
             "price":499,
-            "image":"https://i.pinimg.com/originals/17/49/2c/17492c348d1f046f7c1dda06872e30b6.jpg"
+            "image":"https://purepng.com/public/uploads/large/apple-watch-pcq.png"
         },
          {
             "id": 7,
@@ -53,7 +53,7 @@
             "desc":"8GB RAM, 64GB ROM",
             "color":"33505a",
             "price":399,
-            "image":"https://assets.mspimages.in/c/tr:w-375,h-300,c-at_max/15657-71-1.jpg"
+            "image":"https://download.appmifile.com/5_updatepdf_in/28/02/2019/b7c1a94f-78d8-47ca-a3aa-d6c417b62d6e.png"
         },
          {
             "id": 8,
@@ -69,7 +69,7 @@
             "desc":"12GB RAM, 128GB ROM",
             "color":"33505a",
             "price":899,
-            "image":"https://www.reliancedigital.in/medias/OnePlus-Nord-Gray-Onyx-8-128-491894432-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w1NDIxMDF8aW1hZ2UvanBlZ3xpbWFnZXMvaDYwL2g3Ni85MzM3MjE0Njk3NTAyLmpwZ3w1OWU4YTU3ODM0YzEwNTY1MDU2NzdlNjhmNDNhNjNhMmM4MDUxZjkxOWZlZWU4NTY4NzRkN2RlNmIxM2RlZjhk"
+            "image":"https://image01.oneplus.net/ebp/202007/03/1-m00-15-b6-rb8bwl7--3cabuvcaaipbixzxwc914.png"
         },
          {
             "id": 10,
@@ -77,7 +77,7 @@
             "desc":"Super camera phone from google",
             "color":"33505a",
             "price":599,
-            "image":"https://images-na.ssl-images-amazon.com/images/I/81-fNmQqlLL._AC_SX522_.jpg"
+            "image":"https://purepng.com/public/uploads/large/purepng.com-google-pixel-1smartphoneandroidgooglephoneapplication-211519340822fzn7t.png"
         }
     ]
 }
