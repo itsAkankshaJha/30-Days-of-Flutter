@@ -31,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).canvasColor,
       body: SingleChildScrollView(
         reverse: false,
         child: Center(
@@ -51,9 +51,15 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              Image(
-                image: AssetImage('assets/images/login_image.png'),
-                height: 200,
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Image(
+                  image: AssetImage('assets/images/login_image.png'),
+                  fit: BoxFit.cover,
+                  height: 200,
+                ),
               ),
 
               Padding(

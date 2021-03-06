@@ -15,7 +15,7 @@ class MyDrawer extends StatelessWidget {
             accountName: Text("Pranav Gupta"),
             currentAccountPicture: Icon(
               Icons.account_circle,
-              color: Colors.white,
+              color: Theme.of(context).backgroundColor,
               size: 80,
             ),
           ),
