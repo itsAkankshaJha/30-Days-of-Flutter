@@ -9,8 +9,10 @@ void main(){
   runApp(
     MaterialApp(
       title: "Catalog App",
+      themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(),
-      initialRoute: MyRoutes.myHome ,
+      darkTheme: MyTheme.darkTheme(),
+      initialRoute: MyRoutes.myLogin ,
       routes: {
         MyRoutes.myLogin:(context) =>LoginPage(),
         MyRoutes.myHome:(context) => MyApp(),

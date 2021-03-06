@@ -13,7 +13,7 @@ class MyItem extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar:AppBar(
-          backgroundColor: MyTheme.creamColor,
+          backgroundColor: Colors.transparent,
           elevation: 0,
         ),
         body: SingleChildScrollView(
@@ -22,7 +22,7 @@ class MyItem extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-            color: MyTheme.creamColor,
+            color: Theme.of(context).cardColor,
             ),
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.center,
@@ -34,7 +34,7 @@ class MyItem extends StatelessWidget {
                   clipBehavior: Clip.antiAlias,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.white,
+                    color: Theme.of(context).shadowColor,
                   ),
                   child: Hero(child: Image.network(item.imageUrl),
                     tag: Key(item.id.toString()),
@@ -46,7 +46,7 @@ class MyItem extends StatelessWidget {
                     child: Text(
                       item.name,
                       style:TextStyle(
-                        color: Colors.blueGrey[800],
+                        color: Theme.of(context).textTheme.bodyText2.color,
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
@@ -68,7 +68,7 @@ class MyItem extends StatelessWidget {
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Theme.of(context).shadowColor,
                       borderRadius: BorderRadius.circular(50),
                     ),
                     child: Padding(
