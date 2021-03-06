@@ -12,6 +12,7 @@ class MyItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Theme.of(context).cardColor,
         appBar:AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,

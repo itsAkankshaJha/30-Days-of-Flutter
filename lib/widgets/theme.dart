@@ -40,7 +40,7 @@ class MyTheme {
               color: Colors.white,
             ),
             bodyText2: TextStyle(
-              color: Colors.deepPurple[900],
+              color: Colors.white,
             )
         )
     );
