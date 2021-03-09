@@ -28,7 +28,17 @@ class MyCart extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Placeholder(),
+              Container(
+                height: 400,
+                alignment: Alignment.center,
+                child: Text(
+                  "Your Cart is Empty",
+                  style: TextStyle(
+                    color: Theme.of(context).textTheme.bodyText1.color,
+                    fontSize: 22,
+                  ),
+                ),
+              ),
               Container(
                 padding:EdgeInsets.all(6),
                 decoration: BoxDecoration(
