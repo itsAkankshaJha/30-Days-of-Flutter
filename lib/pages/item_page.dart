@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_flutter/model/catalog.dart';
+import 'package:my_flutter/utils/routes.dart';
 import 'package:my_flutter/widgets/theme.dart';
 
 class MyItem extends StatelessWidget {
@@ -86,20 +87,25 @@ class MyItem extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Container(
-                              alignment: Alignment.center,
-                              height: 40,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                  color: Colors.deepPurple,
-                                  borderRadius: BorderRadius.circular(20)
-                              ),
-                              child: Text(
-                                  "Buy",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 22,
+                            InkWell(
+                              onTap: (){
+                                Navigator.pushNamed(context, MyRoutes.myCart);
+                              },
+                              child: Container(
+                                alignment: Alignment.center,
+                                height: 40,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                    color: Colors.deepPurple,
+                                    borderRadius: BorderRadius.circular(20)
+                                ),
+                                child: Text(
+                                    "Buy",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 22,
+                                  ),
                                 ),
                               ),
                             ),
