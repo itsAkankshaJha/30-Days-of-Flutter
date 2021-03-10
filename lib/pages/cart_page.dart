@@ -1,9 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_flutter/model/catalog.dart';
 import 'package:my_flutter/utils/routes.dart';
+import 'package:my_flutter/model/cart_model.dart';
 
 import 'alert_page.dart';
-class MyCart extends StatelessWidget {
+class MyCart extends StatefulWidget {
+  @override
+  _MyCartState createState() => _MyCartState();
+}
+
+class _MyCartState extends State<MyCart> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,17 +35,7 @@ class MyCart extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                height: 400,
-                alignment: Alignment.center,
-                child: Text(
-                  "Your Cart is Empty",
-                  style: TextStyle(
-                    color: Theme.of(context).textTheme.bodyText1.color,
-                    fontSize: 22,
-                  ),
-                ),
-              ),
+              Expanded(child: CartList()),
               Container(
                 padding:EdgeInsets.all(6),
                 decoration: BoxDecoration(
@@ -95,3 +92,26 @@ class MyCart extends StatelessWidget {
     );
   }
 }
+class CartList extends StatefulWidget {
+  @override
+  _CartListState createState() => _CartListState();
+}
+
+class _CartListState extends State<CartList> {
+  @override
+  Widget build(BuildContext context) {
+    return (CartItems.ids!=null && CartItems.ids.isNotEmpty)?
+      ListView.builder(
+      itemCount: CartItems.totalNumOfItemsInCart,
+        itemBuilder:(context,index){
+          return CartModel(cartItem: ModelItem.getItemById(CartItems.ids[index]),);
+        }
+    ):
+        Container(
+          child: Text(
+            "Your Cart is Empty",
+          ),
+        );
+  }
+}
+
