@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:my_flutter/model/cart_model.dart';
 import 'package:my_flutter/model/catalog.dart';
 import 'package:my_flutter/utils/routes.dart';
 import 'package:flutter/services.dart';
@@ -63,19 +64,7 @@ Widget itemWidget({BuildContext context,@required Item item}){
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      RaisedButton(onPressed: (){
-                        Navigator.pushNamed(context, MyRoutes.myCart);
-                      },
-                          color: Colors.deepPurple,
-                          shape: StadiumBorder(side: BorderSide.none),
-                          clipBehavior: Clip.antiAlias,
-                          child: Text(
-                            "Buy",
-                            style: TextStyle(
-                              fontSize: 22,
-                            ),
-                          )
-                      ),
+                      AddToCart(),
                     ],
                   )
                 ],
@@ -86,3 +75,27 @@ Widget itemWidget({BuildContext context,@required Item item}){
     ),
   );
 }
+class AddToCart extends StatefulWidget {
+  final Item  item;
+  const AddToCart({Key key, this.item}) : super(key: key);
+  @override
+  _AddToCartState createState() => _AddToCartState();
+}
+class _AddToCartState extends State<AddToCart> {
+  @override
+  Widget build(BuildContext context) {
+    return  RaisedButton(onPressed: (){
+      setState(() {
+        Navigator.pushNamed(context, MyRoutes.myCart);
+      });
+    },
+        color: Colors.deepPurple,
+        shape: StadiumBorder(side: BorderSide.none),
+        clipBehavior: Clip.antiAlias,
+        child:Icon(
+          Icons.add_shopping_cart_rounded,
+        )
+    );
+  }
+}
+
