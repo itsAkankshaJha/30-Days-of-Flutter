@@ -64,7 +64,7 @@ Widget itemWidget({BuildContext context,@required Item item}){
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      AddToCart(),
+                      AddToCart(item: item),
                     ],
                   )
                 ],
@@ -85,8 +85,9 @@ class _AddToCartState extends State<AddToCart> {
   @override
   Widget build(BuildContext context) {
     return  RaisedButton(onPressed: (){
+      CartItems.ids.add(widget.item.id);
+      CartItems.totalNumOfItemsInCart = CartItems.ids.length;
       setState(() {
-        Navigator.pushNamed(context, MyRoutes.myCart);
       });
     },
         color: Colors.deepPurple,

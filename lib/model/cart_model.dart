@@ -21,7 +21,7 @@ class _CartModelState extends State<CartModel> {
   }
 }
 class CartItems extends StatefulWidget {
-  static List<int> ids =[5,7];
+  static List<int> ids =[];
   static int totalNumOfItemsInCart = ids.length;
   @override
   _CartItemsState createState() => _CartItemsState();
