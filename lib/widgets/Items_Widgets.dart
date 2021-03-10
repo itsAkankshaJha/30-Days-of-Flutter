@@ -64,7 +64,7 @@ Widget itemWidget({BuildContext context,@required Item item}){
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      AddToCart(item: item),
+                      AddToCart(item: item,),
                     ],
                   )
                 ],
@@ -77,7 +77,8 @@ Widget itemWidget({BuildContext context,@required Item item}){
 }
 class AddToCart extends StatefulWidget {
   final Item  item;
-  const AddToCart({Key key, this.item}) : super(key: key);
+  bool added = false;
+   AddToCart({Key key, this.item}) : super(key: key);
   @override
   _AddToCartState createState() => _AddToCartState();
 }
@@ -85,15 +86,25 @@ class _AddToCartState extends State<AddToCart> {
   @override
   Widget build(BuildContext context) {
     return  RaisedButton(onPressed: (){
-      CartItems.ids.add(widget.item.id);
-      CartItems.totalNumOfItemsInCart = CartItems.ids.length;
-      setState(() {
-      });
+      if(!widget.added){
+
+        CartItems.ids.add(widget.item.id);
+        CartItems.totalNumOfItemsInCart = CartItems.ids.length;
+        setState(() {
+         widget.added = true;
+        });
+      }
+      if(widget.added){
+        print("hello");
+      }
+
     },
         color: Colors.deepPurple,
         shape: StadiumBorder(side: BorderSide.none),
         clipBehavior: Clip.antiAlias,
         child:Icon(
+          (widget.added)?
+              Icons.done_all_outlined:
           Icons.add_shopping_cart_rounded,
         )
     );
