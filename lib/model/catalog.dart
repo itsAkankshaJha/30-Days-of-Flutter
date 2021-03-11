@@ -23,4 +23,7 @@ class Item {
 
 class ModelItem {
   static  List<Item> items;
+  static Item getItemById(int idNum){
+    return items.firstWhere((element) => element.id==idNum);
+  }
 }
