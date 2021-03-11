@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:my_flutter/model/catalog.dart';
+import 'package:my_flutter/widgets/Items_Widgets.dart';
 class CartModel extends StatefulWidget {
   final Item cartItem;
   const CartModel({Key key, this.cartItem}) : super(key: key);
@@ -16,7 +17,10 @@ class _CartModelState extends State<CartModel> {
       title: Text(
         widget.cartItem.name,
       ),
-      trailing: Icon(Icons.remove_circle),
+      trailing: InkWell(
+        onTap: (){
+        },
+          child: Icon(Icons.remove_circle)),
     );
   }
 }
