@@ -67,51 +67,51 @@ class MyItem extends StatelessWidget {
                     ),
                   ),
                 ),
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).shadowColor,
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.all(22),
-                      child: Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                             "\$${item.price.toString()}",
-                              style: TextStyle(
-                                color: Colors.deepOrange,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            InkWell(
-                              onTap: (){
-                                Navigator.pushNamed(context, MyRoutes.myCart);
-                              },
-                              child: Container(
-                                alignment: Alignment.center,
-                                height: 40,
-                                width: 100,
-                                decoration: BoxDecoration(
-                                    color: Colors.deepPurple,
-                                    borderRadius: BorderRadius.circular(20)
-                                ),
-                                child: Text(
-                                    "Buy",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 22,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
+                SizedBox(
+                  height: 80,
+                ),
+                Container(
+                  height: 120,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).shadowColor,
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(22),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                         "\$${item.price.toString()}",
+                          style: TextStyle(
+                            color: Colors.deepOrange,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
+                        InkWell(
+                          onTap: (){
+                            Navigator.pushNamed(context, MyRoutes.myCart);
+                          },
+                          child: Container(
+                            alignment: Alignment.center,
+                            height: 40,
+                            width: 100,
+                            decoration: BoxDecoration(
+                                color: Colors.deepPurple,
+                                borderRadius: BorderRadius.circular(20)
+                            ),
+                            child: Text(
+                                "Buy",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 22,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 )
