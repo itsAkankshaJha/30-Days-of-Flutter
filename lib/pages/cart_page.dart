@@ -35,7 +35,7 @@ class _MyCartState extends State<MyCart> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Expanded(child: CartList()),
+              Expanded(child: CartList(context: context,)),
               Container(
                 padding:EdgeInsets.all(6),
                 decoration: BoxDecoration(
@@ -93,6 +93,9 @@ class _MyCartState extends State<MyCart> {
   }
 }
 class CartList extends StatefulWidget {
+  final BuildContext context;
+
+  const CartList({Key key, this.context}) : super(key: key);
   @override
   _CartListState createState() => _CartListState();
 }
@@ -104,12 +107,16 @@ class _CartListState extends State<CartList> {
       ListView.builder(
       itemCount: CartItems.totalNumOfItemsInCart,
         itemBuilder:(context,index){
-          return CartModel(cartItem: ModelItem.getItemById(CartItems.ids[index]),);
+          return CartModel(cartItem: ModelItem.getItemById(CartItems.ids[index]), context: widget.context,);
         }
     ):
         Container(
+          alignment: Alignment.center,
           child: Text(
             "Your Cart is Empty",
+            style: TextStyle(
+              color: Theme.of(widget.context).textTheme.bodyText2.color,
+            ),
           ),
         );
   }

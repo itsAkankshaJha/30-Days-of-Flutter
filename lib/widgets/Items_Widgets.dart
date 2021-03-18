@@ -77,7 +77,7 @@ Widget itemWidget({BuildContext context,@required Item item}){
 }
 class AddToCart extends StatefulWidget {
   final Item  item;
-  bool added = false;
+   bool added = false;
    AddToCart({Key key, this.item}) : super(key: key);
   @override
   _AddToCartState createState() => _AddToCartState();
