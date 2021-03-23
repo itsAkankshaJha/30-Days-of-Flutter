@@ -10,10 +10,14 @@ My first flutter project is a mobile application for e commerce. My app has main
  This app also works in dark mode.</p>
 
 <h2>Final UI of the app</h2>
+<br>
 <h3> The login page</h3>
+<br>
 <img src="ios/Runner/Assets.xcassets/AppIcon.appiconset/image_2.png",>
-
+<br>
+<br>
 <h3>Catalog List Page</h3>
+<br>
 <p>
 <img src="ios/Runner/Assets.xcassets/AppIcon.appiconset/image_3.png">
 </p>
