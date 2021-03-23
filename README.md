@@ -1,16 +1,21 @@
-# my_flutter
+<h1>E-Commerce App using Flutter</h1>
 
-My first Flutter Application
+<h2> My first Flutter Application.</h2>
+<p>
+My first flutter project is a mobile application for e commerce. My app has mainly three pages
+ the first is login page
+ the second is the main page of the app where you can see the list of items in a vertical manner
+ the third is a description of each item which includes buy button and a add to cart button
+ And finally a cart page where you can save your favourite items
+ This app also works in dark mode.</p>
 
-## Getting Started
+<h2>Final UI of the app</h2>
+<h3> The login page</h3>
+<img src="ios/Runner/Assets.xcassets/AppIcon.appiconset/image_2.png",>
 
-This project is a starting point for a Flutter application.
+<h3>Catalog List Page</h3>
+<p>
+<img src="ios/Runner/Assets.xcassets/AppIcon.appiconset/image_3.png">
+</p>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
