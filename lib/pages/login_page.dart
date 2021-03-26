@@ -1,12 +1,8 @@
 
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'file:///C:/Flutter_Projects/my_flutter/lib/utils/routes.dart';
-
-import 'home_page.dart';
-
 bool pressed = false;
 String name = "";
 final _formKey = GlobalKey<FormState>();
