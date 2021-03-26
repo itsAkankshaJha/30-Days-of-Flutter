@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:my_flutter/model/catalog.dart';
-import 'package:my_flutter/widgets/Items_Widgets.dart';
 class CartModel extends StatefulWidget {
   final Item cartItem;
   final BuildContext context;
